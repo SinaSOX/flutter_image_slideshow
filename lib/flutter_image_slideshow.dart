@@ -118,13 +118,6 @@ class _ImageSlideshowState extends State<ImageSlideshow> {
       child: Stack(
         children: [
           PageView.builder(
-            scrollBehavior: const ScrollBehavior().copyWith(
-              scrollbars: false,
-              dragDevices: {
-                PointerDeviceKind.touch,
-                PointerDeviceKind.mouse,
-              },
-            ),
             onPageChanged: _onPageChanged,
             itemCount: widget.isLoop ? null : widget.children.length,
             controller: _pageController,
